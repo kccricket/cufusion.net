@@ -20,7 +20,10 @@
     />
 
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/skeleton.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+    />
 
     <link rel="icon" type="image/png" href="images/favicon.png" />
 
@@ -30,70 +33,60 @@
           Arial, sans-serif;
       }
 
+      .container {
+        max-width: 1280px;
+        padding: 0 1.2rem;
+      }
+
+      .hero-columns {
+        margin: 0 -1.2rem 1.2rem -1.2rem;
+      }
+
+      .hero-columns .column,
+      .footer .column {
+        padding: 0;
+      }
+
       .hero {
-        background-color: rgb(121, 173, 207);
+        background: #575048 url(images/hero1.jpg) center / cover no-repeat;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
       }
 
-      .videos h3 {
-        font-size: 1.5em;
-        margin-top: 1em;
+      .card {
+        border: 0;
+        box-shadow: 0 0.25rem 1rem rgba(48, 55, 66, 0.15);
+        margin-bottom: 0.8rem;
       }
 
-      .video {
-        margin: 4em 0;
+      .section-title {
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
       }
 
-      .video a {
-        color: initial;
-        text-decoration: none;
-        position: relative;
+      .section-title span {
+        display: inline-block;
+        padding: 0 1rem 0 0;
+        flex: 0 0 auto;
+      }
+
+      .section-title::after {
+        content: "";
+        padding: 0.5rem 0 0 0;
+        border-bottom: 1px solid silver;
+        flex: 1 1 100%;
         display: block;
       }
 
-      .no-touchevents .video a::after {
-        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f144";
-        color: rgba(255,255,255,0);
-        position: absolute;
-        top: 0;
-        height: 100%;
-        right: 0;
-        width: 0;
-        background-color: white;
-        border-image: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%) 0 0 0 100% / 0 0 0 4em;
-        border-width: 0;
-        font-size: 4em;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        background-clip: padding-box;
-        transition: all ease-in-out 0.25s;
+      .footer .columns {
+        padding: 2rem 1.2rem;
+        margin: 2rem -1.2rem 0 -1.2rem;
+        background-color: #575048;
       }
 
-      .no-touchevents .video a:hover::after {
-        color: #000;
-        width: 1em;
-        border-width: 0 0 0 4em;
-      }
-
-      .embedwrapper {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-      }
-
-      .embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      @media (min-width: 550px) {
-        .video h3 {
-          margin-top: 0;
-        }
+      .hosted-by {
+        font-size: 1.2rem;
       }
     </style>
   </head>
@@ -101,81 +94,169 @@
   <body>
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="section hero">
-      <div class="container">
-        <div class="row">
-          <div class="twelve columns" style="margin-top: 25%">
-            <h1>CU Fusion</h1>
+    <div class="container">
+      <div class="columns hero-columns">
+        <div class="column">
+          <div class="hero">
+            <div class="hero-body"><h1>CU Fusion</h1></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section about">
+        <h2 class="section-title"><span>About CU Fusion</span></h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum
+          sem enim, nec interdum tellus pulvinar at. Sed sed nisl ex. Cras
+          feugiat rutrum neque nec viverra. Cras in tortor placerat, fermentum
+          justo commodo, pharetra arcu. Donec at lacinia enim. Etiam bibendum
+          ipsum pellentesque, malesuada lorem a, viverra velit. Aliquam vehicula
+          euismod metus vitae consequat. Curabitur eu odio tellus. Sed egestas
+          aliquam nulla, non gravida justo tristique vitae. Morbi luctus egestas
+          posuere. Cras at blandit justo, et sodales nibh. Donec ac ornare urna,
+          vitae blandit augue. Nam auctor urna id risus pellentesque iaculis.
+          Orci varius natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Maecenas tincidunt nisi ipsum, eget vehicula
+          nunc lobortis vestibulum. Proin efficitur nunc eget orci dictum, id
+          egestas enim suscipit.
+        </p>
+
+        <p>
+          Ut dapibus accumsan erat. In tincidunt erat in rutrum faucibus. Fusce
+          tincidunt blandit quam. Nunc sollicitudin tincidunt sodales. Duis ac
+          pulvinar nisl, at placerat turpis. Nullam laoreet justo nec ipsum
+          faucibus, nec feugiat ligula volutpat. Praesent pellentesque lacus
+          quis sodales rhoncus. Proin id arcu consectetur, ullamcorper dui
+          vitae, mattis risus. Suspendisse tincidunt dui diam, ut dictum purus
+          tincidunt in. Suspendisse lobortis massa eu rutrum pulvinar. Nam nec
+          nulla tortor. Proin condimentum at nulla sed tristique. Ut venenatis
+          sit amet tortor sed ultrices. Sed et dui sit amet sem iaculis molestie
+          in vel leo.
+        </p>
+      </div>
+      <!-- /Section About -->
+
+      <div class="section videos">
+        <h2 class="section-title"><span>Videos</span></h2>
+
+        <div class="columns">
+          <div class="column col-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title h3">
+                  Chefs Vs Normals Taste Testing Pretentious Ingredients
+                </h3>
+              </div>
+              <div class="card-image">
+                <div class="video-responsive">
+                  <iframe
+                    src="https://www.youtube.com/embed/H0q9yxE4IKg?rel=0&amp;modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="card-body">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  nisl est, sagittis eget euismod a, rhoncus non eros. Maecenas
+                  turpis libero, pulvinar a orci quis, dignissim luctus enim.
+                  Nullam ac pellentesque eros, et consectetur metus. In hac
+                  habitasse platea dictumst. Mauris volutpat id libero a
+                  dapibus. Etiam maximus augue et.
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#1"
+                  >View on YouTube <span class="fab fa-youtube"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title h3">
+                  Chefs Vs Normals Taste Testing Pretentious Ingredients
+                </h3>
+              </div>
+              <div class="card-image">
+                <div class="video-responsive">
+                  <iframe
+                    src="https://www.youtube.com/embed/H0q9yxE4IKg?rel=0&amp;modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="card-body">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  nisl est, sagittis eget euismod a, rhoncus non eros. Maecenas
+                  turpis libero, pulvinar a orci quis, dignissim luctus enim.
+                  Nullam ac pellentesque eros, et consectetur metus. In hac
+                  habitasse platea dictumst. Mauris volutpat id libero a
+                  dapibus. Etiam maximus augue et.
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#1"
+                  >View on YouTube <span class="fab fa-youtube"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="column col-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title h3">
+                  Chefs Vs Normals Taste Testing Pretentious Ingredients
+                </h3>
+              </div>
+              <div class="card-image">
+                <div class="video-responsive">
+                  <iframe
+                    src="https://www.youtube.com/embed/H0q9yxE4IKg?rel=0&amp;modestbranding=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="card-body">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  nisl est, sagittis eget euismod a, rhoncus non eros. Maecenas
+                  turpis libero, pulvinar a orci quis, dignissim luctus enim.
+                  Nullam ac pellentesque eros, et consectetur metus. In hac
+                  habitasse platea dictumst. Mauris volutpat id libero a
+                  dapibus. Etiam maximus augue et.
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#1"
+                  >View on YouTube <span class="fab fa-youtube"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Videos Columns -->
+      </div>
+      <!-- /Section Videos -->
+
+      <div class="section footer">
+        <div class="columns">
+          <div class="column col-auto col-ml-auto">
+            <div class="hosted-by"><span class="fab fa-github"></span></div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="section videos">
-      <div class="container">
-        <div class="row header">
-          <div class="twelve columns"><h2>Videos</h2></div>
-        </div>
-        <div class="row video">
-          <div class="four columns">
-            <div class="embedwrapper">
-              <iframe
-                class="embed"
-                src="https://www.youtube.com/embed/H0q9yxE4IKg?rel=0&amp;modestbranding=1"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-          <div class="eight columns">
-            <a href="#1">
-            <h3>
-Chefs Vs Normals Taste Testing Pretentious Ingredients
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              nisl est, sagittis eget euismod a, rhoncus non eros. Maecenas
-              turpis libero, pulvinar a orci quis, dignissim luctus enim. Nullam
-              ac pellentesque eros, et consectetur metus. In hac habitasse
-              platea dictumst. Mauris volutpat id libero a dapibus. Etiam
-              maximus augue et.
-            </p>
-            </a>
-          </div>
-        </div>
-
-        <div class="row video">
-          <div class="four columns">
-            <div class="embedwrapper">
-              <iframe
-                class="embed"
-                src="https://www.youtube.com/embed/H0q9yxE4IKg?rel=0"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-          <div class="eight columns">
-            <a href="#2">
-              <h3>Chefs Vs Normals Taste Testing Pretentious Ingredients</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                nisl est, sagittis eget euismod a, rhoncus non eros. Maecenas
-                turpis libero, pulvinar a orci quis, dignissim luctus enim.
-                Nullam ac pellentesque eros, et consectetur metus. In hac
-                habitasse platea dictumst. Mauris volutpat id libero a dapibus.
-                Etiam maximus augue et.
-              </p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="js/modernizr-custom.js"></script>
+    <!-- /Container -->
   </body>
 </html>
