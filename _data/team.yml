@@ -1,0 +1,40 @@
+- name: Melissa Castagna
+  cu: BCU
+  image: image31.jpg
+  captain: true
+- name: Lauren Kotlarczyk
+  cu: BCU
+  image: image32.jpg
+  captain: true
+- name: Ann Riley
+  cu: AEFCU
+  image: image33.jpg
+  captain: false
+- name: Eugenia Guajardo
+  cu: American Airlines FCU
+  image: image34.jpg
+  captain: false
+- name: George Chacon
+  cu: Bethpage FCU
+  image: image35.jpg
+  captain: false
+- name: David Jamshid
+  cu: Coastal CU
+  image: image36.jpg
+  captain: false
+- name: Antonio Flores
+  cu: GECU
+  image: image37.jpg
+  captain: false
+- name: Beverly Smith
+  cu: Space Coast CU
+  image: image38.jpg
+  captain: false
+- name: Trisha Lee
+  cu: Stanford FCU
+  image: image39.jpg
+  captain: false
+- name: Mike Crossno
+  cu: Vantage CU
+  image: image40.jpg
+  captain: false
