@@ -204,7 +204,7 @@
               <div class="card-image">
                 <div class="video-responsive">
                   <iframe
-                    src="https://www.youtube.com/embed/{{ video.id | url_encode }}?rel=0&amp;modestbranding=1"
+                    src="https://www.youtube.com/embed/{{ video.id | uri_escape }}?rel=0&amp;modestbranding=1"
                     frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
@@ -228,7 +228,7 @@
       <div class="section presentation">
         <h2 class="section-title"><span>Presentation</span></h2>
         <div class="columns">
-          <a href="assets/{{ "NextUP - Virtual Reality Banking - WOM.pptx" | url_encode }}" class="card link-card col-8 col-lg-12 col-mx-auto">
+          <a href="assets/{{ "NextUP - Virtual Reality Banking - WOM.pptx" | uri_escape }}" class="card link-card col-8 col-lg-12 col-mx-auto">
             <div class="columns link-columns">
               <div class="column col-auto link-image-column">
                 <img src="images/presentation.jpg" alt="" class="link-image">
@@ -248,7 +248,7 @@
         <div class="columns">
           {%- for member in site.data.team -%}
           <div class="col-2 col-lg-3 col-sm-4 col-xs-6 member {%- if member.captain == true -%}captain{%- endif -%}">
-            <div class="member-image"><img src="images/team/{{ member.image | url_encode }}" class="avatar avatar-xl"></div>
+            <div class="member-image"><img src="images/team/{{ member.image | uri_escape }}" class="avatar avatar-xl"></div>
             <div class="member-name">{{ member.name | escape }}</div>
             <div class="member-cu">{{ member.cu | escape }}</div>
           </div>
