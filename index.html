@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,6 +35,10 @@
           Arial, sans-serif;
       }
 
+      a:link, a:visited, a:hover {
+        color: #2E335D;
+      }
+
       .container {
         max-width: 1280px;
         padding: 0 1.2rem;
@@ -40,6 +46,7 @@
 
       .hero-columns {
         margin: 0 -1.2rem 1.2rem -1.2rem;
+        background: #fff url(images/herobackground.svg) right bottom / auto 100% no-repeat;
       }
 
       .hero-columns .column,
@@ -48,9 +55,34 @@
       }
 
       .hero {
-        background: #575048 url(images/hero1.jpg) center / cover no-repeat;
+
         padding-left: 0.8rem;
         padding-right: 0.8rem;
+      }
+
+      .link-columns {
+        flex-flow: row nowrap;
+        padding: 0.8rem;
+      }
+
+      @media (max-width: 480px) {
+        .link-columns{
+          flex-flow: column wrap;
+        }
+      }
+
+      .link-text-column {
+        display: flex;
+        align-items: center;
+      }
+
+      .link-image {
+        max-height: 8rem;
+        max-width: 8rem;
+      }
+
+      .presentation .link-image {
+        border: 1px solid silver;
       }
 
       .card {
@@ -79,15 +111,21 @@
         display: block;
       }
 
+      .footer, .footer a:link, .footer a:visited, .footer a:hover {
+        color: white;
+      }
+
       .footer .columns {
         padding: 2rem 1.2rem;
         margin: 2rem -1.2rem 0 -1.2rem;
-        background-color: #575048;
+        background-color: #2E335D;
       }
 
       .hosted-by {
-        font-size: 1.2rem;
+        font-size: 2rem;
       }
+
+
     </style>
   </head>
 
@@ -96,163 +134,91 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container">
       <div class="columns hero-columns">
-        <div class="column">
+        <div class="column col-8 col-md-10 col-xs-12">
           <div class="hero">
-            <div class="hero-body"><h1>CU Fusion</h1></div>
+            <div class="hero-body"><img src="images/cufusionlogo.svg" alt="C.U. Fusion" class="logo"></div>
           </div>
         </div>
       </div>
 
-      <div class="section about">
-        <h2 class="section-title"><span>About CU Fusion</span></h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum
-          sem enim, nec interdum tellus pulvinar at. Sed sed nisl ex. Cras
-          feugiat rutrum neque nec viverra. Cras in tortor placerat, fermentum
-          justo commodo, pharetra arcu. Donec at lacinia enim. Etiam bibendum
-          ipsum pellentesque, malesuada lorem a, viverra velit. Aliquam vehicula
-          euismod metus vitae consequat. Curabitur eu odio tellus. Sed egestas
-          aliquam nulla, non gravida justo tristique vitae. Morbi luctus egestas
-          posuere. Cras at blandit justo, et sodales nibh. Donec ac ornare urna,
-          vitae blandit augue. Nam auctor urna id risus pellentesque iaculis.
-          Orci varius natoque penatibus et magnis dis parturient montes,
-          nascetur ridiculus mus. Maecenas tincidunt nisi ipsum, eget vehicula
-          nunc lobortis vestibulum. Proin efficitur nunc eget orci dictum, id
-          egestas enim suscipit.
-        </p>
+      <div class="section cardboard">
+        <h2 class="section-title"><span>Virtual Office</span></h2>
+        <div class="columns">
 
-        <p>
-          Ut dapibus accumsan erat. In tincidunt erat in rutrum faucibus. Fusce
-          tincidunt blandit quam. Nunc sollicitudin tincidunt sodales. Duis ac
-          pulvinar nisl, at placerat turpis. Nullam laoreet justo nec ipsum
-          faucibus, nec feugiat ligula volutpat. Praesent pellentesque lacus
-          quis sodales rhoncus. Proin id arcu consectetur, ullamcorper dui
-          vitae, mattis risus. Suspendisse tincidunt dui diam, ut dictum purus
-          tincidunt in. Suspendisse lobortis massa eu rutrum pulvinar. Nam nec
-          nulla tortor. Proin condimentum at nulla sed tristique. Ut venenatis
-          sit amet tortor sed ultrices. Sed et dui sit amet sem iaculis molestie
-          in vel leo.
-        </p>
+          <a href="https://www.youtube.com/watch?v=I_uOUAxCwHA" class="card link-card col-8 col-lg-12 col-mx-auto" target="_blank">
+            <div class="columns link-columns">
+              <div class="column col-auto link-image-column">
+                <img src="images/Google_Cardboard_logo.png" alt="" class="link-image">
+              </div>
+              <div class="column link-text-column">
+                <div class="link-text h2">
+                  View the Virtual Office demo for Google Cardboard <span class="fab fa-youtube"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
-      <!-- /Section About -->
+      <!-- /Section Cardboard -->
 
       <div class="section videos">
-        <h2 class="section-title"><span>Videos</span></h2>
-
+        <h2 class="section-title"><span>Reference Videos</span></h2>
         <div class="columns">
-          <div class="column col-4 col-md-6 col-sm-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title h3">
-                  Chefs Vs Normals Taste Testing Pretentious Ingredients
-                </h3>
-              </div>
-              <div class="card-image">
-                <div class="video-responsive">
-                  <iframe
-                    src="https://www.youtube.com/embed/H0q9yxE4IKg?rel=0&amp;modestbranding=1"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <div class="card-body">
-                <div>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  nisl est, sagittis eget euismod a, rhoncus non eros. Maecenas
-                  turpis libero, pulvinar a orci quis, dignissim luctus enim.
-                  Nullam ac pellentesque eros, et consectetur metus. In hac
-                  habitasse platea dictumst. Mauris volutpat id libero a
-                  dapibus. Etiam maximus augue et.
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#1"
-                  >View on YouTube <span class="fab fa-youtube"></span
-                ></a>
-              </div>
-            </div>
-          </div>
+        {%- for video in site.data.videos -%}
 
-          <div class="column col-4 col-md-6 col-sm-12">
+          <div class="column col-4 col-lg-6 col-sm-12">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title h3">
-                  Chefs Vs Normals Taste Testing Pretentious Ingredients
+                 {{ video.title }}
                 </h3>
               </div>
               <div class="card-image">
                 <div class="video-responsive">
                   <iframe
-                    src="https://www.youtube.com/embed/H0q9yxE4IKg?rel=0&amp;modestbranding=1"
+                    src="https://www.youtube.com/embed/{{ video.id }}?rel=0&amp;modestbranding=1"
                     frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
                 </div>
               </div>
-              <div class="card-body">
-                <div>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  nisl est, sagittis eget euismod a, rhoncus non eros. Maecenas
-                  turpis libero, pulvinar a orci quis, dignissim luctus enim.
-                  Nullam ac pellentesque eros, et consectetur metus. In hac
-                  habitasse platea dictumst. Mauris volutpat id libero a
-                  dapibus. Etiam maximus augue et.
-                </div>
-              </div>
               <div class="card-footer">
-                <a href="#1"
+                <a href="#1" target="_blank"
                   >View on YouTube <span class="fab fa-youtube"></span
                 ></a>
               </div>
             </div>
           </div>
+        {%- endfor -%}
 
-          <div class="column col-4 col-md-6 col-sm-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title h3">
-                  Chefs Vs Normals Taste Testing Pretentious Ingredients
-                </h3>
-              </div>
-              <div class="card-image">
-                <div class="video-responsive">
-                  <iframe
-                    src="https://www.youtube.com/embed/H0q9yxE4IKg?rel=0&amp;modestbranding=1"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </div>
-              <div class="card-body">
-                <div>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  nisl est, sagittis eget euismod a, rhoncus non eros. Maecenas
-                  turpis libero, pulvinar a orci quis, dignissim luctus enim.
-                  Nullam ac pellentesque eros, et consectetur metus. In hac
-                  habitasse platea dictumst. Mauris volutpat id libero a
-                  dapibus. Etiam maximus augue et.
-                </div>
-              </div>
-              <div class="card-footer">
-                <a href="#1"
-                  >View on YouTube <span class="fab fa-youtube"></span
-                ></a>
-              </div>
-            </div>
-          </div>
         </div>
         <!-- Videos Columns -->
       </div>
       <!-- /Section Videos -->
 
+      <div class="section presentation">
+        <h2 class="section-title"><span>Presentation</span></h2>
+        <div class="columns">
+          <a href="assets/{{ "NextUP - Virtual Reality Banking - WOM.pptx" | url_encode }}" class="card link-card col-8 col-lg-12 col-mx-auto">
+            <div class="columns link-columns">
+              <div class="column col-auto link-image-column">
+                <img src="images/presentation.jpg" alt="" class="link-image">
+              </div>
+              <div class="column link-text-column">
+                <div class="link-text h2">
+                  Download the presentation <span class="fas fa-file-powerpoint"></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
       <div class="section footer">
         <div class="columns">
           <div class="column col-auto col-ml-auto">
-            <div class="hosted-by"><span class="fab fa-github"></span></div>
+            <div class="hosted-by"><a href="https://github.com/kccricket/cufusion.net"><span class="fab fa-github"></span></a></div>
           </div>
         </div>
       </div>
