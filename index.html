@@ -91,6 +91,12 @@
         margin-bottom: 0.8rem;
       }
 
+      @media (max-width: 960px) {
+        .cardboard .instructions {
+          order: -1;
+        }
+      }
+
       .section-title {
         margin: 2rem 0;
         display: flex;
@@ -128,7 +134,7 @@
 
       .membercaptain .member-image .avatar,
       .team-legend .avatar {
-        box-shadow: 0px 0px 12px 8px rgb(236,191,140);
+        box-shadow: 0 0 12px 8px rgb(236,191,140);
       }
 
       .team-legend .avatar {
@@ -178,7 +184,7 @@
         <h2 class="section-title"><span>Virtual Office</span></h2>
         <div class="columns">
 
-          <a href="https://www.youtube.com/watch?v=I_uOUAxCwHA" class="card link-card col-8 col-lg-12 col-mx-auto" target="_blank">
+          <a href="https://www.youtube.com/watch?v=I_uOUAxCwHA" class="card link-card col-6 col-lg-12" target="_blank">
             <div class="columns link-columns">
               <div class="column col-auto link-image-column">
                 <img src="images/Google_Cardboard_logo.png" alt="" class="link-image">
@@ -190,6 +196,16 @@
               </div>
             </div>
           </a>
+
+          <ol class="instructions col-6 col-lg-12">
+            <li>Download the YouTube App</li>
+            <li>Come back to this page at cufusion.net</li>
+            <li>Click on the VIRTUAL OFFICE link.  This will launch YouTube</li>
+            <li>Place in VR mode by tapping on the ‘VR Glass’ icon <span class="fas fa-vr-cardboard"></span></li>
+            <li>Open the top flap of your Google Cardboard Glasses</li>
+            <li>Insert your phone</li>
+            <li>Enjoy the VR Experience</li>
+          </ol>
         </div>
       </div>
       <!-- /Section Cardboard -->
